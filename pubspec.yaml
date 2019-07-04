@@ -1,6 +1,6 @@
 name: nuts_and_bolts
 description: Customize the nuts and bolts of your widgets. This package is nuts!
-version: 0.1.0
+version: 0.1.1
 author: Vince Varga <vince.varga@serial.dev>
 homepage: https://github.com/dartsidedev/nuts_and_bolts
 issue_tracker: https://github.com/dartsidedev/nuts_and_bolts/issues

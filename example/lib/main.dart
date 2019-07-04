@@ -128,13 +128,13 @@ class ActivityIndicatorDemo extends StatelessWidget {
             ActivityIndicatorDemoRow(
               'Last thing I show you is how to make the spinner ticks thinner. For all the supported features, check out the API reference.',
               NutsActivityIndicator(
-                    radius: 50,
-                    tickCount: 16,
-                    activeTickColor: Colors.red,
-                    deactiveTickColor: Colors.black,
-                    animationDuration: Duration(milliseconds: 750),
-                    relativeWidth: 0.3,
-                  ),
+                radius: 50,
+                tickCount: 16,
+                activeTickColor: Colors.red,
+                deactiveTickColor: Colors.black,
+                animationDuration: Duration(milliseconds: 750),
+                relativeWidth: 0.3,
+              ),
             )
           ],
         ),

@@ -1,5 +1,5 @@
 name: nuts_and_bolts_example
-description: A new Flutter project.
+description: Examples for how to use the nuts_and_bolts Flutter package widgets.
 version: 1.0.0+1
 environment:
   sdk: ">=2.1.0 <3.0.0"
