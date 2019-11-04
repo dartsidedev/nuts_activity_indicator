@@ -1,10 +1,16 @@
-# nuts_activity_indicator_example
+# `nuts_activity_indicator_example`
 
-A new Flutter project.
+> [`dartsidedev`](https://github.com/dartsidedev)
+
+Want to use the `NutsActivityIndicator` in your app? See example app using it on GitHub: [`dartsidedev/ntus_and_bolts`](https://github.com/dartsidedev/nuts_and_bolts/tree/master/packages/nuts_activity_indicator/example).
+
+Need help?
+
+* **Open an issue on [GitHub](https://github.com/dartsidedev/nuts_and_bolts/issues/new)**
+* Drop me a message on [LinkedIn](https://www.linkedin.com/in/vince-varga/)
+* Tweet me [`@serial_dev`](https://twitter.com/serial_dev)
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
