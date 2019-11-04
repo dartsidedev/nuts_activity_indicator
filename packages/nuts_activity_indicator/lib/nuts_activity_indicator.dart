@@ -67,11 +67,33 @@ class NutsActivityIndicator extends StatefulWidget {
   /// TODO: what is this width value really?
   final double relativeWidth;
 
+  /// Radius ratio tells where the rectangles start.
+  ///
+  /// Defaults to 0.5, meaning that the "ticks" will go from
+  /// (0.5 * radius, radius).
+  ///
+  /// I'm sorry I can't explain it any better. Check the example app...
+  ///
+  /// If you know how to explain it better, open a PR!
+  final double startRatio;
+
+  /// Radius ratio tells where the rectangles end.
+  ///
+  /// Defaults to 1, meaning that the "ticks" will go from
+  /// (0.5 * radius, 1 * radius).
+  ///
+  /// I'm sorry I can't explain it any better. Check the example app...
+  ///
+  /// If you know how to explain it better, open a PR!
+  final double endRatio;
+
   /// Creates a highly customizable activity indicator.
   const NutsActivityIndicator({
     Key key,
     this.animating = true,
     this.radius = 10,
+    this.startRatio = 0.5,
+    this.endRatio = 1.0,
     this.tickCount = 12,
     this.activeTickColor = const Color(0xFF9D9D9D),
     this.deactiveTickColor = const Color(0xFFE5E5EA),
@@ -130,6 +152,8 @@ class _NutsActivityIndicatorState extends State<NutsActivityIndicator>
           activeTickColor: widget.activeTickColor,
           deactiveTickColor: widget.deactiveTickColor,
           relativeWidth: widget.relativeWidth,
+          startRatio: widget.startRatio,
+          endRatio: widget.endRatio,
         ),
       ),
     );
@@ -145,6 +169,8 @@ class _NutsActivityIndicatorPainter extends CustomPainter {
   final int tickCount;
   final double radius;
   final RRect _tickRRect;
+  final double startRatio;
+  final double endRatio;
 
   _NutsActivityIndicatorPainter({
     this.radius,
@@ -153,11 +179,13 @@ class _NutsActivityIndicatorPainter extends CustomPainter {
     this.activeTickColor,
     this.deactiveTickColor,
     this.relativeWidth,
+    this.startRatio,
+    this.endRatio,
   })  : _halfTickCount = tickCount ~/ 2,
         _tickRRect = RRect.fromLTRBXY(
-          -radius,
+          -radius * endRatio,
           relativeWidth * radius / 10,
-          -radius / 2,
+          -radius * startRatio,
           -relativeWidth * radius / 10,
           1,
           1,
