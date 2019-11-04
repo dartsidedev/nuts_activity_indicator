@@ -4,7 +4,6 @@ version: 0.1.1
 author: Vince Varga <vince.varga@serial.dev>
 homepage: https://github.com/dartsidedev/nuts_and_bolts
 issue_tracker: https://github.com/dartsidedev/nuts_and_bolts/issues
-documentation: https://pub.dev/documentation/nuts_and_bolts
 environment:
   sdk: ">=2.1.0 <3.0.0"
 dependencies:
