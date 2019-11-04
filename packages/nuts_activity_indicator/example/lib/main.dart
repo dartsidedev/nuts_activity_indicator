@@ -16,55 +16,7 @@ class MyApp extends StatelessWidget {
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
       title: 'Nuts and bolts package Demo',
-      home: DemoList(),
-    );
-  }
-}
-
-class DemoList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      child: ListView(
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(CupertinoPageRoute(
-                  title: '$NutsActivityIndicator',
-                  builder: (context) {
-                    return ActivityIndicatorDemo();
-                  }));
-            },
-            child: Row(
-              children: [
-                Container(
-                  child: NutsActivityIndicator(
-                    radius: 25,
-                    tickCount: 14,
-                    activeTickColor: Colors.red,
-                    deactiveTickColor: Colors.black,
-                    animationDuration: Duration(milliseconds: 500),
-                    relativeWidth: 0.4,
-                  ),
-                  width: 100,
-                  height: 100,
-                ),
-                Expanded(child: Text('Activity Indicators')),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(
-                    CupertinoIcons.right_chevron,
-                    color: Colors.red,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-      navigationBar: CupertinoNavigationBar(
-        middle: Text('Widgets'),
-      ),
+      home: ActivityIndicatorDemo(),
     );
   }
 }
