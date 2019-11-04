@@ -1,21 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:nuts_activity_indicator/nuts_activity_indicator.dart';
 
 void main() {
-  SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
-      title: 'Nuts and bolts package Demo',
+      title: 'NutsActivityIndicator Demo',
       home: ActivityIndicatorDemo(),
     );
   }
@@ -26,14 +22,19 @@ class ActivityIndicatorDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        leading: null,
-        previousPageTitle: 'Widgets',
-        middle: Text('Activity Indicators'),
+        middle: Text('nuts_activity_indicator'),
         actionsForegroundColor: Colors.red,
       ),
       child: SafeArea(
         child: ListView(
           children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+              child: Text(
+                'For all the supported features, check out the API reference.',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
             ActivityIndicatorDemoRow(
               'Without any customization, the activity indicator will look like the "standard" activity indicator from the Flutter cupertino library.',
               NutsActivityIndicator(),
@@ -45,7 +46,7 @@ class ActivityIndicatorDemo extends StatelessWidget {
               ),
             ),
             ActivityIndicatorDemoRow(
-              'We also support the animating option. I guess you could use it to let the user know that your app has crapped its pants?',
+              'We also support the animating option. Set to false to let the user know that your app has crapped its pants, I guess?',
               NutsActivityIndicator(
                 radius: 15,
                 animating: false,
@@ -60,16 +61,27 @@ class ActivityIndicatorDemo extends StatelessWidget {
               ),
             ),
             ActivityIndicatorDemoRow(
-              'BORING. Speed things up by specifying the animation duration. The animation below takes 500 milliseconds to compete (go full circle).',
+              'BORING. Speed things up by specifying the animation duration. The animation below takes 300 milliseconds to compete (go full circle). By default, this duration is 1 second.',
               NutsActivityIndicator(
                 radius: 20,
                 activeTickColor: Colors.yellow,
                 deactiveTickColor: Colors.black,
-                animationDuration: Duration(milliseconds: 500),
+                animationDuration: Duration(milliseconds: 300),
               ),
             ),
             ActivityIndicatorDemoRow(
-              'Two many ticks (rectangles) in the spinner? If you do not like it, change it!',
+              'Want to make the rectangles shorter relative to the size of the widget? Use the startRatio and endRatio parameters.',
+              NutsActivityIndicator(
+                activeTickColor: Colors.indigo,
+                deactiveTickColor: Colors.blueGrey,
+                tickCount: 24,
+                relativeWidth: 0.4,
+                radius: 60,
+                startRatio: 0.7,
+              ),
+            ),
+            ActivityIndicatorDemoRow(
+              'Two many ticks (rectangles) in the spinner? If you do not like it, change it by passing the tickCount parameter! This example uses 3 rectangles to draw the spinner. The default value is 12.',
               NutsActivityIndicator(
                 activeTickColor: Colors.red,
                 tickCount: 3,
@@ -77,7 +89,7 @@ class ActivityIndicatorDemo extends StatelessWidget {
               ),
             ),
             ActivityIndicatorDemoRow(
-              'Last thing I show you is how to make the spinner ticks thinner. For all the supported features, check out the API reference.',
+              'Last thing I show you is how to make the spinner ticks thinner. Use the relativeWidth parameter.',
               NutsActivityIndicator(
                 radius: 50,
                 tickCount: 16,
@@ -86,7 +98,7 @@ class ActivityIndicatorDemo extends StatelessWidget {
                 animationDuration: Duration(milliseconds: 750),
                 relativeWidth: 0.3,
               ),
-            )
+            ),
           ],
         ),
       ),
