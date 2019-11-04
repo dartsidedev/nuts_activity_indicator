@@ -56,24 +56,24 @@ class ActivityIndicatorDemo extends StatelessWidget {
               'Now, let\'s explore the fun parts of this package. For starters, we can change the colors. Let\'s use red and... Orange?',
               NutsActivityIndicator(
                 radius: 25,
-                activeTickColor: Colors.amber,
-                deactiveTickColor: Colors.red,
+                activeColor: Colors.amber,
+                inactiveColor: Colors.red,
               ),
             ),
             ActivityIndicatorDemoRow(
               'BORING. Speed things up by specifying the animation duration. The animation below takes 300 milliseconds to compete (go full circle). By default, this duration is 1 second.',
               NutsActivityIndicator(
                 radius: 20,
-                activeTickColor: Colors.yellow,
-                deactiveTickColor: Colors.black,
+                activeColor: Colors.yellow,
+                inactiveColor: Colors.black,
                 animationDuration: Duration(milliseconds: 300),
               ),
             ),
             ActivityIndicatorDemoRow(
               'Want to make the rectangles shorter relative to the size of the widget? Use the startRatio and endRatio parameters.',
               NutsActivityIndicator(
-                activeTickColor: Colors.indigo,
-                deactiveTickColor: Colors.blueGrey,
+                activeColor: Colors.indigo,
+                inactiveColor: Colors.blueGrey,
                 tickCount: 24,
                 relativeWidth: 0.4,
                 radius: 60,
@@ -83,7 +83,7 @@ class ActivityIndicatorDemo extends StatelessWidget {
             ActivityIndicatorDemoRow(
               'Two many ticks (rectangles) in the spinner? If you do not like it, change it by passing the tickCount parameter! This example uses 3 rectangles to draw the spinner. The default value is 12.',
               NutsActivityIndicator(
-                activeTickColor: Colors.red,
+                activeColor: Colors.red,
                 tickCount: 3,
                 radius: 30,
               ),
@@ -93,8 +93,8 @@ class ActivityIndicatorDemo extends StatelessWidget {
               NutsActivityIndicator(
                 radius: 50,
                 tickCount: 16,
-                activeTickColor: Colors.red,
-                deactiveTickColor: Colors.black,
+                activeColor: Colors.red,
+                inactiveColor: Colors.black,
                 animationDuration: Duration(milliseconds: 750),
                 relativeWidth: 0.3,
               ),

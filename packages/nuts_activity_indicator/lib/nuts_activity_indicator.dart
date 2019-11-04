@@ -41,20 +41,20 @@ class NutsActivityIndicator extends StatefulWidget {
   /// The active color of the small rectangles within the activity indicator.
   ///
   /// The activity indicator (spinner) contains [tickCount] stationary rectangles
-  /// and these ticks' colors are animated between the [activeTickColor] and
-  /// [deactiveTickColor] colors, thus creating a perceived rotation of the object.
+  /// and these ticks' colors are animated between the [activeColor] and
+  /// [inactiveColor] colors, thus creating a perceived rotation of the object.
   ///
-  /// Defaults to a grey color, #XYZ??? TODO
-  final Color activeTickColor;
+  /// Defaults to a grey color, #9D9D9D
+  final Color activeColor;
 
   /// The deactive color of the small rectangles within the activity indicator.
   ///
   /// The activity indicator (spinner) contains [tickCount] stationary rectangles
-  /// and these ticks' colors are animated between the [activeTickColor] and
-  /// [deactiveTickColor] colors, thus creating a perceived rotation of the object.
+  /// and these ticks' colors are animated between the [activeColor] and
+  /// [inactiveColor] colors, thus creating a perceived rotation of the object.
   ///
-  /// Defaults to a grey color, #XYZ??? TODO
-  final Color deactiveTickColor;
+  /// Defaults to a grey color, #E5E5EA
+  final Color inactiveColor;
 
   /// The time in which the activity indicator's animation finishes.
   ///
@@ -95,8 +95,8 @@ class NutsActivityIndicator extends StatefulWidget {
     this.startRatio = 0.5,
     this.endRatio = 1.0,
     this.tickCount = 12,
-    this.activeTickColor = const Color(0xFF9D9D9D),
-    this.deactiveTickColor = const Color(0xFFE5E5EA),
+    this.activeColor = const Color(0xFF9D9D9D),
+    this.inactiveColor = const Color(0xFFE5E5EA),
     this.animationDuration = const Duration(seconds: 1),
     this.relativeWidth = 1,
   }) : super(key: key);
@@ -149,8 +149,8 @@ class _NutsActivityIndicatorState extends State<NutsActivityIndicator>
           animationController: _animationController,
           radius: widget.radius,
           tickCount: widget.tickCount,
-          activeTickColor: widget.activeTickColor,
-          deactiveTickColor: widget.deactiveTickColor,
+          activeColor: widget.activeColor,
+          inactiveColor: widget.inactiveColor,
           relativeWidth: widget.relativeWidth,
           startRatio: widget.startRatio,
           endRatio: widget.endRatio,
@@ -163,8 +163,8 @@ class _NutsActivityIndicatorState extends State<NutsActivityIndicator>
 class _NutsActivityIndicatorPainter extends CustomPainter {
   final int _halfTickCount;
   final Animation<double> animationController;
-  final Color activeTickColor;
-  final Color deactiveTickColor;
+  final Color activeColor;
+  final Color inactiveColor;
   final double relativeWidth;
   final int tickCount;
   final double radius;
@@ -176,8 +176,8 @@ class _NutsActivityIndicatorPainter extends CustomPainter {
     this.radius,
     this.tickCount,
     this.animationController,
-    this.activeTickColor,
-    this.deactiveTickColor,
+    this.activeColor,
+    this.inactiveColor,
     this.relativeWidth,
     this.startRatio,
     this.endRatio,
@@ -201,8 +201,8 @@ class _NutsActivityIndicatorPainter extends CustomPainter {
     final activeTick = (tickCount * animationController.value).floor();
     for (int i = 0; i < tickCount; ++i) {
       paint.color = Color.lerp(
-        activeTickColor,
-        deactiveTickColor,
+        activeColor,
+        inactiveColor,
         ((i + activeTick) % tickCount) / _halfTickCount,
       );
       canvas
