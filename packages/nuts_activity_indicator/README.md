@@ -8,7 +8,9 @@ The "Nuts and bolts" packages are based on the official [`cupertino`](https://fl
 
 The `nuts_activity_indicator` package is based on the [`cupertino` library](https://api.flutter.dev/flutter/cupertino/cupertino-library.html)'s [`CupertinoActivityIndicator`](https://api.flutter.dev/flutter/cupertino/CupertinoActivityIndicator-class.html) widget.
 
-**Do you like this package? ⭐️ Star it on [GitHub](https://github.com/dartsidedev/nuts_and_bolts). 💌 Drop me a message on [LinkedIn](https://www.linkedin.com/in/vince-varga/) 🐦 Tweet me [`@serial_dev`](https://twitter.com/serial_dev).**
+**Do you like this package?**
+
+* ⭐️ Star it on [GitHub](https://github.com/dartsidedev/nuts_and_bolts)
 
 ## Usage
 
