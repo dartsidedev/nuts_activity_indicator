@@ -1,5 +1,7 @@
 ## `nuts_and_bolts` packages
 
+> [`dartsidedev`](https://github.com/dartsidedev)
+
 ### Packages
 
 | Package name | Latest version | Short description |
@@ -12,6 +14,8 @@
 The `nuts_and_bolts` widgets are based on the official [`cupertino`](https://flutter.dev/docs/development/ui/widgets/cupertino) and/or [`material`](https://flutter.dev/docs/development/ui/widgets/material) library widgets with much greater flexibility and customizability.
 
 
-*The `nuts_and_bolts` widgets expose the nuts and bolts of the original widgets (I'm great at naming things, I know).*
+*The `nuts_and_bolts` widgets expose the nuts and bolts of the original widgets (I'm great at naming things, I know). I want you to proclaim "This is nuts!" after you have used and customized a widget.*
 
 The official `material` and `cupertino` libraries are great and they are a safe and sane option when you are starting out. However, in some cases, you might want to change and tweak these widgets for your app. In most cases, these tweaks are not exposed to you, so you cannot change much about their widgets (which is, again, fine for 95% of the developers). `nuts_and_bolts` widgets aim to be the customizable versions of the official widgets.
+
+This project is in its early days, so expect API changes. Feedback (both positive or negative) is always welcome.

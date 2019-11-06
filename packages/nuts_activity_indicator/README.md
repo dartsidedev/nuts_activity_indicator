@@ -1,4 +1,4 @@
-# `nuts_activity_indicator`
+## `nuts_activity_indicator`
 
 > [`dartsidedev`](https://github.com/dartsidedev)
 
