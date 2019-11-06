@@ -27,25 +27,18 @@ NutsActivityIndicator(
 * ⭐️ Star it on [GitHub](https://github.com/dartsidedev/nuts_and_bolts)
 
 
-This package is also part of the [`nuts_and_bolts`](https://pub.dev/packages/nuts_and_bolts) package.
-
-The "Nuts and bolts" packages include highly customizable widgets that are based on the official [`cupertino`](https://flutter.dev/docs/development/ui/widgets/cupertino) and/or [`material`](https://flutter.dev/docs/development/ui/widgets/material). `Nuts*` widgets expose the nuts and bolts of the original widgets (I'm great at naming things, I know).
-
-Even though the official `material` and `cupertino` libraries are great and they are a safe and sane default option, in some cases, you might want to change and tweak them for your app. In most cases, these tweaks are not exposed to you, so you cannot change much about their widgets (which is, again, fine for 95% of the developers). [`nuts_and_bolts`](https://pub.dev/packages/nuts_and_bolts) widgets aim to be the customizable versions of the official widgets.
-
+This package is one of the many [`nuts_and_bolts`](https://github.com/dartsidedev/nuts_and_bolts) packages.
 
 ## Usage
 
-1. Add `nuts_activity_indicator` as dependency in your `pubspec.yaml`.
-2. Import the package in the file where you would like to use the activity indicator.
-
-    ```dart
-    import 'package:nuts_activity_indicator/nuts_activity_indicator.dart';
-    ```
-
-3. Use the widget. [Read the API reference](https://pub.dev/documentation/nuts_activity_indicator) to see all currently supported parameters.
+[Read the API reference](https://pub.dev/documentation/nuts_activity_indicator) to see all currently supported parameters.
 
 ```dart
+// Add nuts_activity_indicator as dependency in your pubspec.
+import 'package:nuts_activity_indicator/nuts_activity_indicator.dart';
+
+//...
+
 NutsActivityIndicator(
     activeColor: Colors.indigo,
     inactiveColor: Colors.blueGrey,
@@ -60,7 +53,7 @@ NutsActivityIndicator(
 ## Resources
 
 * [Read the source code](https://github.com/dartsidedev/nuts_and_bolts/tree/master/packages/nuts_activity_indicator)
-* [Report an issue](https://github.com/dartsidedev/nuts_and_bolts/issues/new)
+* [Report an issue](https://github.com/dartsidedev/nuts_and_bolts/issues/new): Feel free to submit README improvements, typo fixes, too!
 * [Read the API reference](https://pub.dev/documentation/nuts_activity_indicator)
 * [Check out the Flutter example app](https://github.com/dartsidedev/nuts_and_bolts/tree/master/packages/nuts_activity_indicator/example)
 * [Learn more about the package on pub.dev](https://pub.dev/packages/nuts_activity_indicator)
