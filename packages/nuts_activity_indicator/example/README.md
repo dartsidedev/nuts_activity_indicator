@@ -2,7 +2,7 @@
 
 > [`dartsidedev`](https://github.com/dartsidedev)
 
-Want to use the `NutsActivityIndicator` in your app? See example app using it on GitHub: [`dartsidedev/ntus_and_bolts`](https://github.com/dartsidedev/nuts_and_bolts/tree/master/packages/nuts_activity_indicator/example).
+Want to use the `NutsActivityIndicator` in your app? See example app using it on GitHub: [`dartsidedev/nuts_and_bolts`](https://github.com/dartsidedev/nuts_and_bolts/tree/master/packages/nuts_activity_indicator/example).
 
 Need help?
 
