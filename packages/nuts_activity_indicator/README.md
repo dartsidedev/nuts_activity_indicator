@@ -2,15 +2,37 @@
 
 > [`dartsidedev`](https://github.com/dartsidedev)
 
-This package is part of the `nuts_and_bolt` package.
+[![Pub](https://img.shields.io/pub/v/nuts_activity_indicator.svg)](https://pub.dev/packages/nuts_activity_indicator)
 
-The "Nuts and bolts" packages are based on the official [`cupertino`](https://flutter.dev/docs/development/ui/widgets/cupertino) and [`material`](https://flutter.dev/docs/development/ui/widgets/material) widgets with greater customizability. It exposes the nuts and bolts of the original widgets (I'm great at naming things, I know).
 
-The `nuts_activity_indicator` package is based on the [`cupertino` library](https://api.flutter.dev/flutter/cupertino/cupertino-library.html)'s [`CupertinoActivityIndicator`](https://api.flutter.dev/flutter/cupertino/CupertinoActivityIndicator-class.html) widget.
+**The `nuts_activity_indicator` package is based on the [`cupertino` library](https://api.flutter.dev/flutter/cupertino/cupertino-library.html)'s [`CupertinoActivityIndicator`](https://api.flutter.dev/flutter/cupertino/CupertinoActivityIndicator-class.html) widget and it offers great customizability. You can customize, for example, the color, the width and the number of the rectangles that make up the activity indicator, the speed of spinning, etc...**
+
+```dart
+NutsActivityIndicator(
+    radius: 33,
+    activeColor: Colors.indigo,
+    inactiveColor: Colors.red,
+    tickCount: 11,
+    startRatio: 0.55,
+    animationDuration: Duration(milliseconds: 123),
+),
+```
+
+<img src="https://github.com/dartsidedev/nuts_and_bolts/blob/master/assets/nuts_activity_indicator/nuts_activity_indicator_example_app.png?raw=true" alt="Flutter package nuts_activity_indicator" height="600"/>
+
+[**The video is much more interesting than the screenshot. Download it here ~1.7 MB.**](https://github.com/dartsidedev/nuts_and_bolts/blob/master/assets/nuts_activity_indicator/nuts_activity_indicator_example_app.mp4?raw=true)
 
 **Do you like this package?**
 
 * ⭐️ Star it on [GitHub](https://github.com/dartsidedev/nuts_and_bolts)
+
+
+This package is also part of the [`nuts_and_bolts`](https://pub.dev/packages/nuts_and_bolts) package.
+
+The "Nuts and bolts" packages include highly customizable widgets that are based on the official [`cupertino`](https://flutter.dev/docs/development/ui/widgets/cupertino) and/or [`material`](https://flutter.dev/docs/development/ui/widgets/material). `Nuts*` widgets expose the nuts and bolts of the original widgets (I'm great at naming things, I know).
+
+Even though the official `material` and `cupertino` libraries are great and they are a safe and sane default option, in some cases, you might want to change and tweak them for your app. In most cases, these tweaks are not exposed to you, so you cannot change much about their widgets (which is, again, fine for 95% of the developers). [`nuts_and_bolts`](https://pub.dev/packages/nuts_and_bolts) widgets aim to be the customizable versions of the official widgets.
+
 
 ## Usage
 
@@ -23,23 +45,17 @@ The `nuts_activity_indicator` package is based on the [`cupertino` library](http
 
 3. Use the widget. [Read the API reference](https://pub.dev/documentation/nuts_activity_indicator) to see all currently supported parameters.
 
-    ```dart
-    NutsActivityIndicator(
-      activeColor: Colors.indigo,
-      inactiveColor: Colors.blueGrey,
-      tickCount: 24,
-      relativeWidth: 0.4,
-      radius: 60,
-      startRatio: 0.7,
-      animationDuration: Duration(milliseconds: 500),
-    ),
-    ```
-
-## Example app
-
-[**The video is much more interesting than the screenshot. Download it here ~1.7 MB.**](https://github.com/dartsidedev/nuts_and_bolts/blob/master/assets/nuts_activity_indicator/nuts_activity_indicator_example_app.mp4?raw=true)
-
-<img src="https://github.com/dartsidedev/nuts_and_bolts/blob/master/assets/nuts_activity_indicator/nuts_activity_indicator_example_app.png?raw=true" alt="Flutter package nuts_activity_indicator" height="600"/>
+```dart
+NutsActivityIndicator(
+    activeColor: Colors.indigo,
+    inactiveColor: Colors.blueGrey,
+    tickCount: 24,
+    relativeWidth: 0.4,
+    radius: 60,
+    startRatio: 0.7,
+    animationDuration: Duration(milliseconds: 500),
+),
+```
 
 ## Resources
 
