@@ -1,20 +1,19 @@
-# `nuts_and_bolts`
+## `nuts_and_bolts`
 
-My goal with this package is to provide more customizability to the widgets in the `material` and `cupertino` libraries. I found that many (ok, well, at least one) of the official widgets can be easily tweaked to support a greater customizability, therefore making your app unique and pixel-perfect. 
+> [`dartsidedev`](https://github.com/dartsidedev)
 
-I want you to proclaim "This is nuts!" after you have used and customized a widget.
+[![Pub](https://img.shields.io/pub/v/nuts_and_bolts.svg)](https://pub.dev/packages/nuts_and_bolts)
 
-This project is in its early days, so expect API changes.
+This package exports all of the `nuts_and_bolt` packages as one. See [`dartsidedev/nuts_and_bolts`](https://github.com/dartsidedev/nuts_and_bolts) repository on GitHub for more information.
 
-## Resources
+### Examples
 
-* [Read the source code](https://github.com/dartsidedev/nuts_and_bolts)
-* [Report an issue](https://github.com/dartsidedev/nuts_and_bolts/issues)
-* [Read the API reference](https://pub.dev/documentation/nuts_and_bolts)
-* [Check out the examples](https://github.com/dartsidedev/nuts_and_bolts/tree/master/example)
-* [Learn more about the package on pub.dev](https://pub.dev/packages/nuts_and_bolts)
-* [Ask a question](https://github.com/dartsidedev/nuts_and_bolts/issues)
+#### `NutsActivityIndicator`
 
-## Examples
+<img src="https://github.com/dartsidedev/nuts_and_bolts/blob/master/assets/nuts_activity_indicator/nuts_activity_indicator_example_app.png?raw=true" alt="Flutter package nuts_activity_indicator" height="600"/>
 
-Check out the [examples](https://github.com/dartsidedev/nuts_and_bolts/tree/master/example)! You can run the example app by simply `cd example`, then `flutter run`. You should see a list of widgets and a detailed demo view for each of the widgets (well, now we only have one, but it's only a matter of time that it changes).
+### Important pending tasks
+
+* Add example app that uses all widgets that we export
+* Add CI to the repo
+* Write meaningful tests

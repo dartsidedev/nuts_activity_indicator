@@ -1,4 +1,10 @@
-## `0.1.1` - July 4, 2019
+## `0.2.0`
+
+**Restructure project**
+
+* extract `NutsActivityIndicator` into its own package and export it from the `nuts_and_bolts` "umbrella" package.
+
+## `0.1.1`
 
 **Please welcome our first widget: `NutsActivityIndicator`**
 
@@ -9,6 +15,6 @@ Other changes:
 * a proper example app, so that developers can see how the widgets from this package work
 * preparing for CI/CD: dartanalyzer and dartfmt run locally, but we'll add them soon enough to a CI pipeline
 
-## `0.1.0` - July 3, 2019
+## `0.1.0`
 
 **Let's get this party started!**
