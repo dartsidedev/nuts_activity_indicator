@@ -89,7 +89,7 @@ class NutsActivityIndicator extends StatefulWidget {
 
   /// Creates a highly customizable activity indicator.
   const NutsActivityIndicator({
-    Key key,
+    Key? key,
     this.animating = true,
     this.radius = 10,
     this.startRatio = 0.5,
@@ -107,7 +107,7 @@ class NutsActivityIndicator extends StatefulWidget {
 
 class _NutsActivityIndicatorState extends State<NutsActivityIndicator>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
+  AnimationController? _animationController;
 
   @override
   void initState() {
@@ -117,7 +117,7 @@ class _NutsActivityIndicatorState extends State<NutsActivityIndicator>
       vsync: this,
     );
     if (widget.animating) {
-      _animationController.repeat();
+      _animationController!.repeat();
     }
   }
 
@@ -126,16 +126,16 @@ class _NutsActivityIndicatorState extends State<NutsActivityIndicator>
     super.didUpdateWidget(oldWidget);
     if (widget.animating != oldWidget.animating) {
       if (widget.animating) {
-        _animationController.repeat();
+        _animationController!.repeat();
       } else {
-        _animationController.stop();
+        _animationController!.stop();
       }
     }
   }
 
   @override
   void dispose() {
-    _animationController.dispose();
+    _animationController!.dispose();
     super.dispose();
   }
 
@@ -162,9 +162,9 @@ class _NutsActivityIndicatorState extends State<NutsActivityIndicator>
 
 class _NutsActivityIndicatorPainter extends CustomPainter {
   final int _halfTickCount;
-  final Animation<double> animationController;
-  final Color activeColor;
-  final Color inactiveColor;
+  final Animation<double>? animationController;
+  final Color? activeColor;
+  final Color? inactiveColor;
   final double relativeWidth;
   final int tickCount;
   final double radius;
@@ -173,15 +173,15 @@ class _NutsActivityIndicatorPainter extends CustomPainter {
   final double endRatio;
 
   _NutsActivityIndicatorPainter({
-    this.radius,
-    this.tickCount,
+    required this.radius,
+    required this.tickCount,
     this.animationController,
     this.activeColor,
     this.inactiveColor,
-    this.relativeWidth,
-    this.startRatio,
-    this.endRatio,
-  })  : _halfTickCount = tickCount ~/ 2,
+    required this.relativeWidth,
+    required this.startRatio,
+    required this.endRatio,
+  })   : _halfTickCount = tickCount ~/ 2,
         _tickRRect = RRect.fromLTRBXY(
           -radius * endRatio,
           relativeWidth * radius / 10,
@@ -198,13 +198,13 @@ class _NutsActivityIndicatorPainter extends CustomPainter {
     canvas
       ..save()
       ..translate(size.width / 2, size.height / 2);
-    final activeTick = (tickCount * animationController.value).floor();
+    final activeTick = (tickCount * animationController!.value).floor();
     for (int i = 0; i < tickCount; ++i) {
       paint.color = Color.lerp(
         activeColor,
         inactiveColor,
         ((i + activeTick) % tickCount) / _halfTickCount,
-      );
+      )!;
       canvas
         ..drawRRect(_tickRRect, paint)
         ..rotate(-math.pi * 2 / tickCount);
