@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'NutsActivityIndicator Demo',
       home: ActivityIndicatorDemo(),
+      theme: CupertinoThemeData(primaryColor: Colors.red),
     );
   }
 }
@@ -23,7 +24,6 @@ class ActivityIndicatorDemo extends StatelessWidget {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text('nuts_activity_indicator'),
-        actionsForegroundColor: Colors.red,
       ),
       child: SafeArea(
         child: ListView(
@@ -110,7 +110,7 @@ class ActivityIndicatorDemoRow extends StatelessWidget {
   final String description;
   final NutsActivityIndicator indicator;
 
-  const ActivityIndicatorDemoRow(this.description, this.indicator, {Key key})
+  const ActivityIndicatorDemoRow(this.description, this.indicator, {Key? key})
       : super(key: key);
 
   @override
