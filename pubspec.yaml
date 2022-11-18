@@ -1,6 +1,6 @@
 name: nuts_activity_indicator
 description: Highly customizable activity indicator (spinner) for your Flutter apps based on the cupertino package.
-version: 1.0.0-rc.3
+version: 1.0.0
 homepage: https://github.com/vincevargadev
 repository: https://github.com/dartsidedev/nuts_activity_indicator
 issue_tracker: https://github.com/dartsidedev/nuts_activity_indicator/issues
