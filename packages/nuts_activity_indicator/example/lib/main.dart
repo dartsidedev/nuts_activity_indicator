@@ -23,7 +23,6 @@ class ActivityIndicatorDemo extends StatelessWidget {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text('nuts_activity_indicator'),
-        actionsForegroundColor: Colors.red,
       ),
       child: SafeArea(
         child: ListView(

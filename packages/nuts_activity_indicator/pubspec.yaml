@@ -1,11 +1,11 @@
 name: nuts_activity_indicator
 description: Highly customizable activity indicator (spinner) based on the  activity indicator from the cupertino package.
-version: 0.1.1
-author: Vince Varga <vince.varga@serial.dev>
-homepage: https://github.com/dartsidedev/nuts_and_bolts
+version: 1.0.0-rc.1
+homepage: https://github.com/vincevargadev
+repository: https://github.com/dartsidedev/nuts_and_bolts
 issue_tracker: https://github.com/dartsidedev/nuts_and_bolts/issues
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 dependencies:
   flutter:
     sdk: flutter

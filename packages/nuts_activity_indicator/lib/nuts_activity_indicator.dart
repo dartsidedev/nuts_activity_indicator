@@ -89,7 +89,7 @@ class NutsActivityIndicator extends StatefulWidget {
 
   /// Creates a highly customizable activity indicator.
   const NutsActivityIndicator({
-    Key key,
+    Key? key,
     this.animating = true,
     this.radius = 10,
     this.startRatio = 0.5,
@@ -107,7 +107,7 @@ class NutsActivityIndicator extends StatefulWidget {
 
 class _NutsActivityIndicatorState extends State<NutsActivityIndicator>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
+  late AnimationController _animationController;
 
   @override
   void initState() {
@@ -173,14 +173,14 @@ class _NutsActivityIndicatorPainter extends CustomPainter {
   final double endRatio;
 
   _NutsActivityIndicatorPainter({
-    this.radius,
-    this.tickCount,
-    this.animationController,
-    this.activeColor,
-    this.inactiveColor,
-    this.relativeWidth,
-    this.startRatio,
-    this.endRatio,
+    required this.radius,
+    required this.tickCount,
+    required this.animationController,
+    required this.activeColor,
+    required this.inactiveColor,
+    required this.relativeWidth,
+    required this.startRatio,
+    required this.endRatio,
   })  : _halfTickCount = tickCount ~/ 2,
         _tickRRect = RRect.fromLTRBXY(
           -radius * endRatio,
@@ -204,7 +204,7 @@ class _NutsActivityIndicatorPainter extends CustomPainter {
         activeColor,
         inactiveColor,
         ((i + activeTick) % tickCount) / _halfTickCount,
-      );
+      )!;
       canvas
         ..drawRRect(_tickRRect, paint)
         ..rotate(-math.pi * 2 / tickCount);
