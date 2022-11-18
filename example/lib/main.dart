@@ -21,8 +21,10 @@ class ActivityIndicatorDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
+      backgroundColor: Colors.white,
       navigationBar: CupertinoNavigationBar(
         middle: Text('nuts_activity_indicator'),
+        backgroundColor: Colors.red,
       ),
       child: SafeArea(
         child: ListView(
