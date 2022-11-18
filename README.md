@@ -1,10 +1,12 @@
-## `nuts_activity_indicator`
+# `nuts_activity_indicator`
 
 > Highly customizable activity indicator (spinner) for your Flutter apps based on the cupertino package.
 
 The `nuts_activity_indicator` package is based on the [`cupertino` library](https://api.flutter.dev/flutter/cupertino/cupertino-library.html)'s
 [`CupertinoActivityIndicator`](https://api.flutter.dev/flutter/cupertino/CupertinoActivityIndicator-class.html) widget
-and it offers great customizability. You can customize:
+and it offers greater customizability.
+
+You can customize:
 
 * the colors 🧡❤️
 * the width, size and the number of tickers 📏
@@ -25,16 +27,14 @@ and it offers great customizability. You can customize:
 
 ## Usage
 
-[Read the API reference](https://pub.dev/documentation/nuts_activity_indicator) to see all currently supported parameters.
-
 ```dart
-// Add nuts_activity_indicator as dependency in your pubspec.
-// flutter pub add nuts_activity_indicator
+// Add nuts_activity_indicator as dependency in your pubspec:
+// $ flutter pub add nuts_activity_indicator
 
-// Then import the package:
+// Then, import the package:
 import 'package:nuts_activity_indicator/nuts_activity_indicator.dart';
 
-// And use the widget:
+// And finally, use and customize the widget:
 final spinner = NutsActivityIndicator(
     activeColor: Colors.indigo,
     inactiveColor: Colors.blueGrey,
@@ -45,3 +45,17 @@ final spinner = NutsActivityIndicator(
     animationDuration: Duration(milliseconds: 500),
 );
 ```
+
+This package exports a highly customizable activity indicator, "spinner" widget based on the iOS-style activity indicator from the `cupertino` package.
+
+The key takeaways from [Apple Human Interface Guidelines on Activity Indicators](https://developer.apple.com/design/human-interface-guidelines/ios/controls/progress-indicators/#activity-indicators)
+that are also relevant to the `NutsActivityIndicator` class are:
+
+* use the activity indicator only when the task cannot be quantified (there is no known remaining time, task count, data size).
+* keep it moving: only disable `animating` if the process stalls.
+
+For more information, see
+* [Flutter `cupertino` library `CupertinoActivityIndicator` class](https://api.flutter.dev/flutter/cupertino/CupertinoActivityIndicator-class.html)
+* [Apple Human Interface Guidelines on Activity Indicators](https://developer.apple.com/design/human-interface-guidelines/ios/controls/progress-indicators/#activity-indicators)
+
+[Read the API reference](https://pub.dev/documentation/nuts_activity_indicator) to see all currently supported parameters.

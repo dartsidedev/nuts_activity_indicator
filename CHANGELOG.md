@@ -1,6 +1,7 @@
-## 1.0.0-rc.2
+## 1.0.0-rc.3
 
-First release candidate with null-safety.
+Add null-safety support.
+
 Add macos, windows, and linux support for the example app.
 Update android and ios for the example app.
 
