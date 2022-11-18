@@ -21,9 +21,7 @@ NutsActivityIndicator(
 ),
 ```
 
-<img src="https://github.com/dartsidedev/nuts_and_bolts/blob/master/assets/nuts_activity_indicator/nuts_activity_indicator_example_app.png?raw=true" alt="Flutter package nuts_activity_indicator" height="600"/>
-
-[**The video is much more interesting than the screenshot. Download it here ~1.7 MB.**](https://github.com/dartsidedev/nuts_and_bolts/blob/master/assets/nuts_activity_indicator/nuts_activity_indicator_example_app.mp4?raw=true)
+<img src="https://github.com/dartsidedev/nuts_and_bolts/blob/master/assets/nuts_activity_indicator/nuts_activity_indicator_example_app.gif?raw=true" alt="Flutter package nuts_activity_indicator" height="600"/>
 
 **Do you like this package?**
 
