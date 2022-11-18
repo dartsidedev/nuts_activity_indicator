@@ -106,11 +106,14 @@ class ActivityIndicatorDemo extends StatelessWidget {
 }
 
 class ActivityIndicatorDemoRow extends StatelessWidget {
+  const ActivityIndicatorDemoRow(
+    this.description,
+    this.indicator, {
+    Key? key,
+  }) : super(key: key);
+
   final String description;
   final NutsActivityIndicator indicator;
-
-  const ActivityIndicatorDemoRow(this.description, this.indicator, {Key key})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
